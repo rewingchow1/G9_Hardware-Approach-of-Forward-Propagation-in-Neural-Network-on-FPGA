@@ -1,0 +1,42 @@
+21:24:45 **** Build of configuration Debug for project NN ****
+make all 
+'Building file: ../src/layer.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/layer.o" -I../../NN_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/layer.d" -MT"src/layer.o" -o "src/layer.o" "../src/layer.c"
+'Finished building: ../src/layer.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'fixed_to_float':
+../src/main.c:39:23: warning: division by zero [-Wdiv-by-zero]
+     return ((u8)input / (u8)(1 << FIXED_POINT_FRACTIONAL_BITS));
+                       ^
+../src/main.c: In function 'main':
+../src/main.c:79:13: warning: unused variable 'thousandths' [-Wunused-variable]
+  int whole, thousandths;
+             ^~~~~~~~~~~
+../src/main.c:79:6: warning: unused variable 'whole' [-Wunused-variable]
+  int whole, thousandths;
+      ^~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/neuron.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/neuron.o" -I../../NN_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/neuron.d" -MT"src/neuron.o" -o "src/neuron.o" "../src/neuron.c"
+'Finished building: ../src/neuron.c'
+' '
+'Building target: NN.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN.elf"  ./src/layer.o ./src/main.o ./src/neuron.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: NN.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN.elf  |tee "NN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41964	   1424	100001164	100044552	5f68f08	NN.elf
+'Finished building: NN.elf.size'
+' '
+
+21:24:47 Build Finished (took 1s.555ms)
+

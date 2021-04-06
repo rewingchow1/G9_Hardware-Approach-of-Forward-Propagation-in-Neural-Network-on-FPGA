@@ -1,0 +1,29 @@
+21:23:07 **** Build of configuration Debug for project DMA_Test ****
+make all 
+'Building file: ../src/dmaTest.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dmaTest.o" -I../../DMA_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dmaTest.d" -MT"src/dmaTest.o" -o "src/dmaTest.o" "../src/dmaTest.c"
+../src/dmaTest.c: In function 'main':
+../src/dmaTest.c:56:42: warning: passing argument 2 of 'XAxiDma_SimpleTransfer' makes integer from pointer without a cast [-Wint-conversion]
+  status = XAxiDma_SimpleTransfer(&myDMA, in_fixed, 2*sizeof(u16), XAXIDMA_DMA_TO_DEVICE);
+                                          ^~~~~~~~
+In file included from ../src/dmaTest.c:8:0:
+../../DMA_Test_bsp/microblaze_0/include/xaxidma.h:751:5: note: expected 'UINTPTR {aka unsigned int}' but argument is of type 'u16 * {aka short unsigned int *}'
+ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
+     ^~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/dmaTest.c'
+' '
+'Building target: DMA_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DMA_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DMA_Test.elf"  ./src/dmaTest.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DMA_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DMA_Test.elf  |tee "DMA_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27344	   1524	   3172	  32040	   7d28	DMA_Test.elf
+'Finished building: DMA_Test.elf.size'
+' '
+
+21:23:08 Build Finished (took 1s.101ms)
+

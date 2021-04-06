@@ -1,0 +1,360 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2017 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+// self defined includes
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdlib.h>
+#include "neuralnet.h"
+#include "xuartlite.h"
+#include "xil_types.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xaxidma.h"
+#include "xaxidma_hw.h"
+#include "sleep.h"
+
+#include "platform.h"
+#include "platform_config.h"
+#if defined (__arm__) || defined(__aarch64__)
+#include "xil_printf.h"
+#endif
+#include "xil_cache.h"
+
+//LWIP include files
+#include "lwip/ip_addr.h"
+#include "lwip/tcp.h"
+#include "lwip/err.h"
+#include "lwip/tcp.h"
+#include "lwip/inet.h"
+#include "lwip/etharp.h"
+#if LWIP_IPV6==1
+#include "lwip/ip.h"
+#else
+#if LWIP_DHCP==1
+#include "lwip/dhcp.h"
+#endif
+#endif
+
+void lwip_init(); /* missing declaration in lwIP */
+struct netif *echo_netif;
+
+//TCP Network Params
+#define SRC_MAC_ADDR {0x00, 0x0a, 0x35, 0x00, 0x00, 0x29}
+#define SRC_IP4_ADDR "1.1.29.2"
+#define IP4_NETMASK "255.255.0.0"
+#define IP4_GATEWAY "1.1.0.1"
+#define SRC_PORT 50001
+
+#define DEST_IP4_ADDR  "1.1.25.2"
+#define DEST_IP6_ADDR "fe80::6600:6aff:fe71:fde6"
+#define DEST_PORT 7
+
+#define TCP_SEND_BUFSIZE 20
+
+u32 checkHalted(u32 baseAddress,u32 offset);
+
+
+// UART
+#define UARTLITE_DEVICE_ID XPAR_AXI_UARTLITE_0_DEVICE_ID
+
+
+int main()
+{
+
+	xil_printf("Enter the String to be Sent\n\r");
+		while (XUartLite_IsReceiveEmpty(UART_ADDR));
+		char ch;
+		int i = 0;
+		while (((ch = XUartLite_RecvByte(UART_ADDR)) != '\r') && (i < TCP_SEND_BUFSIZE-2))
+		{
+			xil_printf("%c", ch);
+			user_buf[i] = ch;
+			++i;
+	//		ch = XUartLite_RecvByte(UART_ADDR);
+		}
+		user_buf[i] = '\n';
+		user_buf[i+1]= '\0';
+		xil_printf("\n\rDone\n\r");
+
+		//Varibales for IP parameters
+		#if LWIP_IPV6==0
+			ip_addr_t ipaddr, netmask, gw;
+		#endif
+
+			//The mac address of the board. this should be unique per board
+			unsigned char mac_ethernet_address[] = SRC_MAC_ADDR;
+
+			//Network interface
+			app_netif = &server_netif;
+
+			//Initialize platform
+			init_platform();
+
+			//Defualt IP parameter values
+		#if LWIP_IPV6==0
+		#if LWIP_DHCP==1
+		    ipaddr.addr = 0;
+			gw.addr = 0;
+			netmask.addr = 0;
+		#else
+			(void)inet_aton(SRC_IP4_ADDR, &ipaddr);
+			(void)inet_aton(IP4_NETMASK, &netmask);
+			(void)inet_aton(IP4_GATEWAY, &gw);
+		#endif
+		#endif
+
+			//LWIP initialization
+			lwip_init();
+
+			//Setup Network interface and add to netif_list
+		#if (LWIP_IPV6 == 0)
+			if (!xemac_add(app_netif, &ipaddr, &netmask,
+								&gw, mac_ethernet_address,
+								PLATFORM_EMAC_BASEADDR)) {
+				xil_printf("Error adding N/W interface\n\r");
+				return -1;
+			}
+		#else
+			if (!xemac_add(app_netif, NULL, NULL, NULL, mac_ethernet_address,
+								PLATFORM_EMAC_BASEADDR)) {
+				xil_printf("Error adding N/W interface\n\r");
+				return -1;
+			}
+			app_netif->ip6_autoconfig_enabled = 1;
+
+			netif_create_ip6_linklocal_address(app_netif, 1);
+			netif_ip6_addr_set_state(app_netif, 0, IP6_ADDR_VALID);
+
+		#endif
+			netif_set_default(app_netif);
+
+			//Now enable interrupts
+			platform_enable_interrupts();
+
+			//Specify that the network is up
+			netif_set_up(app_netif);
+
+		#if (LWIP_IPV6 == 0)
+		#if (LWIP_DHCP==1)
+			/* Create a new DHCP client for this interface.
+			 * Note: you must call dhcp_fine_tmr() and dhcp_coarse_tmr() at
+			 * the predefined regular intervals after starting the client.
+			 */
+			dhcp_start(app_netif);
+			dhcp_timoutcntr = 24;
+
+			while(((app_netif->ip_addr.addr) == 0) && (dhcp_timoutcntr > 0))
+				xemacif_input(app_netif);
+
+			if (dhcp_timoutcntr <= 0) {
+				if ((app_netif->ip_addr.addr) == 0) {
+					xil_printf("DHCP Timeout\n\r");
+					xil_printf("Configuring default IP of %s\n\r", SRC_IP4_ADDR);
+					(void)inet_aton(SRC_IP4_ADDR, &(app_netif->ip_addr));
+					(void)inet_aton(IP4_NETMASK, &(app_netif->netmask));
+					(void)inet_aton(IP4_GATEWAY, &(app_netif->gw));
+				}
+			}
+
+			ipaddr.addr = app_netif->ip_addr.addr;
+			gw.addr = app_netif->gw.addr;
+			netmask.addr = app_netif->netmask.addr;
+		#endif
+		#endif
+
+			//Print connection settings
+		#if (LWIP_IPV6 == 0)
+			print_ip_settings(&ipaddr, &netmask, &gw);
+		#else
+			print_ip6("Board IPv6 address ", &app_netif->ip6_addr[0].u_addr.ip6);
+		#endif
+
+			//Gratuitous ARP to announce MAC/IP address to network
+			etharp_gratuitous(app_netif);
+
+			//Setup connection
+			setup_client_conn();
+
+			//Event loop
+			ack = 0;
+			while (!ack) {
+				//Call tcp_tmr functions
+				//Must be called regularly
+				if (TcpFastTmrFlag) {
+					tcp_fasttmr();
+					TcpFastTmrFlag = 0;
+				}
+				if (TcpSlowTmrFlag) {
+					tcp_slowtmr();
+					TcpSlowTmrFlag = 0;
+				}
+
+				//Process data queued after interupt
+				xemacif_input(app_netif);
+			}
+
+	int accuracy_count = 0;
+	float accuracy;
+	u8 *test_labels, *test_images;
+	u32 uart_status;
+	u32 receivedBytes=0;
+	u32 totalReceivedBytes=0;
+	XUartLite_Config *myUartConfig;
+	XUartLite myUart;
+
+	u32 dma_status;
+	u32 dma_recv_arr[10];
+	u16 * test_images_fixed;
+
+	test_labels = malloc(sizeof(u8)*(test_label_filesize));
+	test_images = malloc(sizeof(u8)*(test_image_filesize));
+	test_images_fixed = malloc(sizeof(u16)*(test_image_filesize));
+
+
+	// init uart
+	myUartConfig = XUartLite_LookupConfig(UARTLITE_DEVICE_ID);
+	uart_status = XUartLite_CfgInitialize(&myUart, myUartConfig, XPAR_UARTLITE_0_BASEADDR);
+	if(uart_status != XST_SUCCESS)
+		xil_printf("\n\rUART Initialization Failed...\n\r");
+	xil_printf("\n\rUART Initialization Passed...\n\r");
+
+
+	// Receive Test Labels
+	receivedBytes=0;
+	totalReceivedBytes=0;
+	xil_printf("Send Labels! \n\r");
+	while(totalReceivedBytes < test_label_filesize){
+		receivedBytes = XUartLite_Recv(&myUart, (u8*)&test_labels[totalReceivedBytes], 100);
+		totalReceivedBytes += receivedBytes;
+	}
+	xil_printf("Total Test Label Received Bytes: %d \n\r", totalReceivedBytes);
+	xil_printf("Labels Received! \n\r");
+
+	// Send Test Labels to 2nd FPGA
+	xil_printf("Sending Test Labels! \n\r");
+	tcp_send(test_labels);
+
+	/*
+	for (int i=0; i < num_of_test_images/100; i++) {
+		xil_printf("Iteration %d \n\r", i);
+		tcp_send(&test_labels[i*100]);
+		if(tcp_send_data(&test_labels[i*100], 100) != ERR_OK)
+		{
+			xil_printf("Send Test Labels Failed! \n\r");
+		}
+	}
+	*/
+
+	// Receive Test Images
+	receivedBytes=0;
+	totalReceivedBytes=0;
+	xil_printf("Send Images! \n\r");
+	while(totalReceivedBytes < test_image_filesize){
+		receivedBytes = XUartLite_Recv(&myUart, (u8*)&test_images[totalReceivedBytes], 100);
+		totalReceivedBytes += receivedBytes;
+	}
+
+	xil_printf("Total Test Image Received Bytes: %d \n\r", totalReceivedBytes);
+	xil_printf("Images Received! \n\r");
+
+
+	// convert the byte test image to fix point test image
+	u16 tmp;
+	print("Converting u8 to Fixed-Point Notation\n\r");
+	for(int i=0; i<test_image_filesize; ++i)
+	{
+		//xil_printf("Index: %d\n\r", i);
+		tmp = float_to_fixed(test_images[i]/255.0);
+		test_images_fixed[i] = tmp;
+	}
+	print("Conversion Done\n\r");
+	free(test_images);
+
+	// Init DMA
+	XAxiDma_Config *myDMAConfig;
+	XAxiDma myDMA;
+
+	myDMAConfig = XAxiDma_LookupConfigBaseAddr(XPAR_AXI_DMA_0_BASEADDR);
+	dma_status = XAxiDma_CfgInitialize(&myDMA, myDMAConfig);
+	if(dma_status != XST_SUCCESS){
+		print("DMA Initialization Failed\n\r");
+		return -1;
+	}
+	print("DMA Initialization Success...\n\r");
+
+	for (int i=0; i<num_of_test_images;i++){
+
+		// Send test images to the dma
+		dma_status = checkHalted(XPAR_AXI_DMA_0_BASEADDR,0x4);
+		Xil_DCacheFlushRange((u32)test_images_fixed,image_size*sizeof(u16));
+		dma_status = XAxiDma_SimpleTransfer(&myDMA, (u32)&dma_recv_arr[0], 10*sizeof(u32), XAXIDMA_DEVICE_TO_DMA);
+		dma_status = XAxiDma_SimpleTransfer(&myDMA, (UINTPTR)&test_images_fixed[image_size*i], image_size*sizeof(u16), XAXIDMA_DMA_TO_DEVICE);
+		if(dma_status != XST_SUCCESS)
+		{
+			print("DMA Transmit Failed\n\r");
+			return -1;
+		}
+		xil_printf("\n\rDMA Transmit Successful, Test Image %d Sent\n\r", i+1);
+
+
+		float max = 0;
+		float tmp_out;
+		int digit = 0;
+
+		// get the output result for the current test image
+		for (int j=0; j<10; j++)
+		{
+			xil_printf("Neural Network Digit Weights: %d  %d\n\r", (u16)dma_recv_arr[j],j);
+			tmp_out = fixed_to_float((u16)dma_recv_arr[j]);
+			if (tmp_out > max)
+			{
+				max = tmp_out;
+				digit = j;
+			}
+
+		}
+		if ((int)digit == (int)test_labels[i]) accuracy_count++;
+		accuracy = (accuracy_count * 100)/(i+1);
+        xil_printf("Accuracy Count: %d	Accuracy: %d \n\r", accuracy_count, (int)accuracy);
+		xil_printf("Neural Network Output: %d	Label: %d \n\r", (int)digit, (int)test_labels[i]);
+	}
+
+	return 0;
+}
+
+u32 checkHalted(u32 baseAddress,u32 offset){
+	u32 status;
+	status = (XAxiDma_ReadReg(baseAddress,offset))&XAXIDMA_HALTED_MASK;
+	return status;
+}
