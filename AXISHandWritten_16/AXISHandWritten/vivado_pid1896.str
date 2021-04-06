@@ -1,0 +1,304 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 1896
+License: Customer
+
+Current time: 	Thu Mar 25 12:11:51 CST 2021
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 28 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Yu Gao
+User home directory: C:/Users/Yu Gao
+User working directory: C:/ip_repo/AXISHandWritten
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.3
+RDI_DATADIR: D:/Vivado/2018.3/data
+RDI_BINDIR: D:/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Yu Gao/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Yu Gao/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Yu Gao/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/ip_repo/AXISHandWritten/vivado.log
+Vivado journal file location: 	C:/ip_repo/AXISHandWritten/vivado.jou
+Engine tmp dir: 	C:/ip_repo/AXISHandWritten/.Xil/Vivado-1896-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2018.3
+XILINX_SDK: D:/SDK/2018.3
+XILINX_VIVADO: D:/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 669 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 109 MB (+111384kb) [00:00:07]
+// [Engine Memory]: 577 MB (+453958kb) [00:00:07]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\ip_repo\AXISHandWritten\edit_NeuralNetHandWritten_v1_0.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/AXISHandWritten/NeuralNetHandWritten_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ip_repo/AXISHandWritten/NeuralNetHandWritten_1_0'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 46 MB. Current time: 3/25/21, 12:11:53 PM CST
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 716 MB (+115466kb) [00:00:13]
+// [Engine Memory]: 754 MB (+1366kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  2984 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 786.563 ; gain = 156.207 
+// Project name: edit_NeuralNetHandWritten_v1_0; location: C:/ip_repo/AXISHandWritten; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bx (cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (NeuralNetHandWritten_v1_0.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 571, 125); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 571, 125, false, false, false, false, true); // cl (w, cp) - Double Click
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 790 MB. GUI used memory: 53 MB. Current time: 3/25/21, 12:12:08 PM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 5); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, weights_layer1_2.mem]", 9, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, weights_layer1_2.mem]", 9, false, false, false, false, false, true); // B (D, cp) - Double Click
+// [Engine Memory]: 820 MB (+30479kb) [00:00:33]
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// HMemoryUtils.trashcanNow. Engine heap size: 853 MB. GUI used memory: 53 MB. Current time: 3/25/21, 12:12:23 PM CST
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Thu Mar 25 12:12:31 2021] Launched synth_1... Run output will be captured here: C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_FAILED
+// ah (cp): Synthesis Failed: addNotify
+// Elapsed time: 1185 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cp)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), n1 : NeuralNet (NeuralNet.v)]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), n1 : NeuralNet (NeuralNet.v), lay1_m4 : VecMult (VecMult.v)]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0.v", 1); // k (j, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // ac (cp)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1888 ms.
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6, true); // L (C, F) - Node
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Synthesis]", 3, false); // L (C, F)
+dismissDialog("Settings"); // F (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 598, 221); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "2", 1); // e (bc, f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Thu Mar 25 12:33:08 2021] Launched synth_1... Run output will be captured here: C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.runs/synth_1/runme.log 
+// [GUI Memory]: 130 MB (+17047kb) [00:21:26]
+dismissDialog("Starting Design Runs"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 860 MB. GUI used memory: 69 MB. Current time: 3/25/21, 12:42:23 PM CST
+// Elapsed time: 1559 seconds
+selectTab((HResource) null, (HResource) null, "Log", 2); // aI (aF, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 860 MB. GUI used memory: 66 MB. Current time: 3/25/21, 1:12:23 PM CST
+// Elapsed time: 1116 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), n1 : NeuralNet (NeuralNet.v)]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 13); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 14); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v)]", 15, true); // B (D, cp) - Node
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 14, true, false, false, false, true, false); // B (D, cp) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// Elapsed time: 32 seconds
+setFileChooser("D:/UofT/ECE532/project/Neuron/Neuron6.0/Neuron6_0/Neuron6_0.srcs/sim_1/imports/new/NeuralNet_tb.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 36 seconds
+dismissDialog("Add Sources"); // c (cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset sim_1 -norecurse D:/UofT/ECE532/project/Neuron/Neuron6.0/Neuron6_0/Neuron6_0.srcs/sim_1/imports/new/NeuralNet_tb.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v)]", 15, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v)]", 16, true); // B (D, cp) - Node
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_SYNTHESIS, "Synthesis", false); // g (Q, cp): FALSE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property used_in_synthesis false [get_files  C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.srcs/sim_1/imports/new/NeuralNet_tb.v] 
+selectCheckBox(PAResourceQtoS.SrcFilePropPanels_IMPLEMENTATION, "Implementation", false); // g (Q, cp): FALSE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property used_in_implementation false [get_files  C:/ip_repo/AXISHandWritten/edit_NeuralNetHandWritten_v1_0.srcs/sim_1/imports/new/NeuralNet_tb.v] 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v)]", 16, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v)]", 16, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0.v", 1); // k (j, cp)
+// Elapsed time: 12 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 16); // u (Q, cp)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 16); // u (Q, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 521, 262); // cl (w, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), LogicFunc_v1_S00_AXIS_inst : NeuralNetHandWritten_v1_0_S00_AXIS (NeuralNetHandWritten_v1_0_S00_AXIS.v)]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), LogicFunc_v1_S00_AXIS_inst : NeuralNetHandWritten_v1_0_S00_AXIS (NeuralNetHandWritten_v1_0_S00_AXIS.v)]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 263, 129); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 263, 129, false, false, false, false, true); // cl (w, cp) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 803, 341); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 803, 341, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 811, 325); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0_S00_AXIS.v", 811, 325, false, false, false, false, true); // cl (w, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), LogicFunc_v1_M00_AXIS_inst : NeuralNetHandWritten_v1_0_M00_AXIS (NeuralNetHandWritten_v1_0_M00_AXIS.v)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NeuralNetHandWritten_v1_0 (NeuralNetHandWritten_v1_0.v), LogicFunc_v1_M00_AXIS_inst : NeuralNetHandWritten_v1_0_M00_AXIS (NeuralNetHandWritten_v1_0_M00_AXIS.v)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("NeuralNetHandWritten_v1_0_M00_AXIS.v", 813, 202); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0_S00_AXIS.v", 4); // k (j, cp)
+// Elapsed time: 245 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0.v", 2); // k (j, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 566, 128); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 701, 159); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 860 MB. GUI used memory: 69 MB. Current time: 3/25/21, 1:42:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 860 MB. GUI used memory: 68 MB. Current time: 3/25/21, 2:12:24 PM CST
+// Elapsed time: 3791 seconds
+selectCodeEditor("NeuralNetHandWritten_v1_0.v", 568, 127); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNet_tb.v", 3); // k (j, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v)]", 16, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v), n1 : NeuralNet (NeuralNet.v)]", 17, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v), n1 : NeuralNet (NeuralNet.v)]", 17, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, NeuralNet_tb (NeuralNet_tb.v), n1 : NeuralNet (NeuralNet.v), lay2_m2 : VecMult (VecMult.v)]", 24, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("NeuralNet.v", 660, 133); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("NeuralNet.v", 353, 148); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 469, 227); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 791, 213); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 374, 210); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 217, 151); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 332, 73); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 261, 73); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 301, 111); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 282, 174); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 252, 93); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 319, 169); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 343, 387); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 314, 149); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 293, 229); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 329, 65); // cl (w, cp)
+selectCodeEditor("NeuralNet.v", 362, 69); // cl (w, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  1452 ms.
+selectCodeEditor("NeuralNet.v", 491, 224); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("NeuralNet.v", 593, 385); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0_S00_AXIS.v", 4); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "NeuralNetHandWritten_v1_0_M00_AXIS.v", 5); // k (j, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0_M00_AXIS.v", 814, 268); // cl (w, cp)
+selectCodeEditor("NeuralNetHandWritten_v1_0_M00_AXIS.v", 326, 146); // cl (w, cp)
