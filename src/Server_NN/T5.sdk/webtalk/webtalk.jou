@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# 
+# Start of session at: Wed Apr 14 00:54:40 2021
+# Process ID: 9060
+# Current directory: W:/ECE532/Server_NN/Server_NN/T5.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: W:/ECE532/Server_NN/Server_NN/T5.sdk/webtalk/webtalk.log
+# Journal file: W:/ECE532/Server_NN/Server_NN/T5.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

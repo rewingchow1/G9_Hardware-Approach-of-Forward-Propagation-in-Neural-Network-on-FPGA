@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;tcp_SW/src/main.c&apos;" deleteContents="false" description="Delete resource &apos;tcp_SW/src/main.c&apos;" element1="/tcp_SW/src/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1614758257120"/>&#x0A;<refactoring comment="Delete resource &apos;tcp_SW/src/echo.c&apos;" deleteContents="false" description="Delete resource &apos;tcp_SW/src/echo.c&apos;" element1="/tcp_SW/src/echo.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1614762941806"/>
-</session>
