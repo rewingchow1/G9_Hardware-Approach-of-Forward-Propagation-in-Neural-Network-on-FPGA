@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="bootloop" key="tcp_HW-microblaze_0-initElf"/>
+	<item value="tcp_HW" key="programfpga.hwplatform"/>
+	<item value="design_1_wrapper.bit" key="tcp_HW-bitFile"/>
+	<item value="design_1_wrapper.mmi" key="tcp_HW-bmmFile"/>
+	<item value="Local" key="tcp_HW-target"/>
+	<item value="Auto Detect" key="tcp_HW-device"/>
+	<item value="false" key="tcp_HW-partial_bit"/>
+</section>
