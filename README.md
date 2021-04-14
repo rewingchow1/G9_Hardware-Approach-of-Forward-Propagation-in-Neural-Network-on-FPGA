@@ -9,9 +9,16 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 ## How to Use:
 ### Client with Neural Network:
 #### To Run Out of the Box:
-1.
-2.sdfsd
-3.
+1. Open Vivado 2018.3, click open project, search for the T5.xpr in Client_NN, then open it
+2. Click file, then click Launch SDK
+3. Once SDK is open, open main.c, change SRC_IP4_ADDR to the IP address of your FPGA. Ex, if your IP address is 1.1.22.2, then set ADDR to 22. If your IP address is not in the format of 1.1.ADDR.2, then go to line 75 , change to your IP address
+4. Change SRC_MAC_ADDR to the coressponding MAC address of your FPGA
+5. Change DEST_IP4_ADDR to the coressponding IP address of your server FPGA with the corresponding port for DEST_PORT (Default: 7)
+6. Open TeraTerm and connect the terminal to COM5, with a serial speed of 230400
+7. Program the FPGA, then run with GDB configuration
+8. When prompted in TeraTerm terminal to send labels, click "File" then "Send file..." and locate the labels file ("test_labels_10k") and send it as a binary
+9. When prompted in TeraTerm terminal to send images, click "File" then "Send file..." and locate the images file ("test_images_10k") and send it as a binary
+NOTE: Setup server before setting up client.
 
 #### To Configure Neural Network or Client System:
 ##### Neural Network:
@@ -32,7 +39,7 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 2. Click file, then click Launch SDK
 3. Once SDK is open, open main.c, change ADDR to the IP address of your FPGA. Ex, if your IP address is 1.1.22.2, then set ADDR to 22. If your IP address is not in the format of 1.1.ADDR.2, then go to line 196 and line 251, change to your IP address
 4. Change MAC_ADDR to the coressponding MAC address of your FPGA
-5. Connect the terminal COM5, with a serial speed of 9600
+5. Connect the SDK terminal or TeraTerm to COM5, with a serial speed of 9600
 6. Rebuild the project, program the FPGA, then run with GDB
 7. On the termial you should see information that states the server is ready to receive data
 8. Once server is ready, disconnect the terminal, open the pyserial.py file with IDLE (or other editors), and run it, you should see on the termial it prints out listening at COM5
@@ -53,6 +60,7 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 - **AXISHandWritten_16**: Includes source code for pre-trained MNIST 784-16-10 Neural Network with corresponding Vivado 2018.3 project.
 - **Client_NN**: Includes system design for client FPGA along with corresponding Vivado 2018.3 project and Vivado SDK application to run client software on MicroBlaze.
 - **Server_NN**: Included system design for server FPGA along with corresponding Vivado 2018.3 project and Vivado SDK application to run server software on MicroBlaze. Also includes a pyserial.py Python3 file which is used to visualize neural network performance.
+- **NN_Files**: 10k testing images and labels.
 
 ### docs
 - **presentations**: Proposal, mid-project and final presenation for the project.
