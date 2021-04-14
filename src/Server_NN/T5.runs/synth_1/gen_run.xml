@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1618374710">
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1618378643">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -63,7 +63,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_mig_7series_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_ethernet_0_dma_0"/>

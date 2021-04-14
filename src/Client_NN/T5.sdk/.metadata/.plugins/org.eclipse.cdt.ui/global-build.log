@@ -211,3 +211,549 @@ mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
 00:28:33 **** Incremental Build of configuration Debug for project NN_HW_Client ****
 make all 
 make: Nothing to be done for 'all'.
+00:35:26 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+01:04:51 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156980	   1668	203919912	204078560	c29fde0	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+01:04:57 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+02:28:58 **** Build of project test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axidma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axiethernet"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling lwip src and adapter files"
+contrib/ports/xilinx/netif/xaxiemacif_hw.c: In function 'init_axiemac':
+contrib/ports/xilinx/netif/xaxiemacif_hw.c:54:11: warning: unused variable 'mac_address' [-Wunused-variable]
+  unsigned mac_address = (unsigned)(UINTPTR)(netif->state);
+           ^~~~~~~~~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_phy_negotiated_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:199:6: warning: unused variable 'temp' [-Wunused-variable]
+  u16 temp;
+      ^~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_IEEE_phy_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+contrib/ports/xilinx/netif/xaxiemacif.c: In function 'xaxiemacif_init':
+contrib/ports/xilinx/netif/xaxiemacif.c:681:16: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  netif->output = xaxiemacif_output;
+                ^
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c: In function 'is_checksum_valid':
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:6: warning: passing argument 2 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u8_t {aka unsigned char}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:34: warning: passing argument 3 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+                                  ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u16_t {aka short unsigned int}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:6: warning: passing argument 4 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u8_t {aka unsigned char}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:13: warning: passing argument 5 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+             ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u16_t {aka short unsigned int}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+02:29:24 **** Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/i2c_access.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+'Finished building: ../src/i2c_access.c'
+' '
+'Building file: ../src/iic_phyreset.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_mb.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.o" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_ppc.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.o" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynq.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.o" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building file: ../src/platform_zynqmp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynqmp.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynqmp.d" -MT"src/platform_zynqmp.o" -o "src/platform_zynqmp.o" "../src/platform_zynqmp.c"
+'Finished building: ../src/platform_zynqmp.c'
+' '
+'Building file: ../src/sfp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+'Finished building: ../src/sfp.c'
+' '
+'Building file: ../src/si5324.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+'Finished building: ../src/si5324.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137373	   1656	3960739	4099768	 3e8eb8	test.elf
+'Finished building: test.elf.size'
+' '
+02:29:32 **** Build of project test1_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axidma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axiethernet"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling lwip src and adapter files"
+contrib/ports/xilinx/netif/xaxiemacif_hw.c: In function 'init_axiemac':
+contrib/ports/xilinx/netif/xaxiemacif_hw.c:54:11: warning: unused variable 'mac_address' [-Wunused-variable]
+  unsigned mac_address = (unsigned)(UINTPTR)(netif->state);
+           ^~~~~~~~~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_phy_negotiated_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:199:6: warning: unused variable 'temp' [-Wunused-variable]
+  u16 temp;
+      ^~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_IEEE_phy_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+contrib/ports/xilinx/netif/xaxiemacif.c: In function 'xaxiemacif_init':
+contrib/ports/xilinx/netif/xaxiemacif.c:681:16: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  netif->output = xaxiemacif_output;
+                ^
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c: In function 'is_checksum_valid':
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:6: warning: passing argument 2 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u8_t {aka unsigned char}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:34: warning: passing argument 3 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+                                  ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u16_t {aka short unsigned int}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:6: warning: passing argument 4 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u8_t {aka unsigned char}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:13: warning: passing argument 5 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+             ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u16_t {aka short unsigned int}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+02:29:59 **** Build of configuration Debug for project test1 ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/i2c_access.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+'Finished building: ../src/i2c_access.c'
+' '
+'Building file: ../src/iic_phyreset.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_mb.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.o" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/platform_ppc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_ppc.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.o" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+'Finished building: ../src/platform_ppc.c'
+' '
+'Building file: ../src/platform_zynq.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynq.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.o" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+'Finished building: ../src/platform_zynq.c'
+' '
+'Building file: ../src/platform_zynqmp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynqmp.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_zynqmp.d" -MT"src/platform_zynqmp.o" -o "src/platform_zynqmp.o" "../src/platform_zynqmp.c"
+'Finished building: ../src/platform_zynqmp.c'
+' '
+'Building file: ../src/sfp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+'Finished building: ../src/sfp.c'
+' '
+'Building file: ../src/si5324.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -I../../test1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+'Finished building: ../src/si5324.c'
+' '
+'Building target: test1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test1_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test1.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: test1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test1.elf  |tee "test1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137373	   1656	3960739	4099768	 3e8eb8	test1.elf
+'Finished building: test1.elf.size'
+' '
+02:48:41 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156980	   1668	203919912	204078560	c29fde0	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+02:49:00 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/neuralnet.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/neuralnet.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/neuralnet.d" -MT"src/neuralnet.o" -o "src/neuralnet.o" "../src/neuralnet.c"
+'Finished building: ../src/neuralnet.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156876	   1668	203919912	204078456	c29fd78	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+02:49:06 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156876	   1668	203919912	204078456	c29fd78	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+02:49:11 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+02:52:07 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+02:53:19 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156876	   1668	203919912	204078456	c29fd78	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+02:53:22 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+02:56:54 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+03:00:50 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+03:04:34 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/neuralnet.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/neuralnet.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/neuralnet.d" -MT"src/neuralnet.o" -o "src/neuralnet.o" "../src/neuralnet.c"
+'Finished building: ../src/neuralnet.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156888	   1668	203919908	204078464	c29fd80	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+03:04:54 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.
+03:08:04 **** Auto Build of configuration Debug for project NN_HW_Client ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/neuralnet.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/neuralnet.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/neuralnet.d" -MT"src/neuralnet.o" -o "src/neuralnet.o" "../src/neuralnet.c"
+'Finished building: ../src/neuralnet.c'
+' '
+'Building target: NN_HW_Client.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_HW_Client.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156980	   1668	203919912	204078560	c29fde0	NN_HW_Client.elf
+'Finished building: NN_HW_Client.elf.size'
+' '
+03:08:07 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+make all 
+make: Nothing to be done for 'all'.

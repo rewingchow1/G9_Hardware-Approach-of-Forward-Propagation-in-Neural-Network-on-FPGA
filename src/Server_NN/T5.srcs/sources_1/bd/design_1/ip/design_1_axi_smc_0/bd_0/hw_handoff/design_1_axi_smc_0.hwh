@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  2 23:15:56 2021" VIVADOVERSION="2018.3.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 14 01:37:15 2021" VIVADOVERSION="2018.3.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="bd_afc3" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 

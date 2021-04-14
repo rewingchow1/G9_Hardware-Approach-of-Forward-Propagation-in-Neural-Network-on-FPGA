@@ -1,4 +1,4 @@
-00:50:16 **** Build of project tcp_SW_bsp ****
+02:23:00 **** Build of project tcp_SW_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
 make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -50,5 +50,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-00:51:33 Build Finished (took 1m:16s.747ms)
+02:23:17 Build Finished (took 16s.891ms)
 

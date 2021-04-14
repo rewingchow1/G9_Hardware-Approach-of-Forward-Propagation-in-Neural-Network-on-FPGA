@@ -1,6 +1,6 @@
-00:28:33 **** Incremental Build of configuration Debug for project NN_HW_Client ****
+03:08:07 **** Incremental Build of configuration Debug for project NN_HW_Client ****
 make all 
 make: Nothing to be done for 'all'.
 
-00:28:33 Build Finished (took 204ms)
+03:08:07 Build Finished (took 202ms)
 

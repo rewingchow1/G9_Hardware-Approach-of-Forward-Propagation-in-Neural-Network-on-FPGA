@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
-| Date         : Wed Apr 14 00:42:26 2021
+| Date         : Wed Apr 14 01:44:20 2021
 | Host         : BA3145WS28 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -1036,7 +1036,7 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '22' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: w:/ECE532/Server_NN/Server_NN/T5.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc (Line: 354)
+Current XDC: c:/Server_NN/T5.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc (Line: 354)
 Related violations: <none>
 
 REQP-1959#1 Advisory

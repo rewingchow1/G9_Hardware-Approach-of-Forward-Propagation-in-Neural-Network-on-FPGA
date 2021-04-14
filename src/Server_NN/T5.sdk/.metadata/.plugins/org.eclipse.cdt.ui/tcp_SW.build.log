@@ -1,4 +1,4 @@
-00:51:38 **** Build of configuration Debug for project tcp_SW ****
+02:23:17 **** Build of configuration Debug for project tcp_SW ****
 make all 
 'Building file: ../src/echo.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -80,5 +80,5 @@ mb-size tcp_SW.elf  |tee "tcp_SW.elf.size"
 'Finished building: tcp_SW.elf.size'
 ' '
 
-00:51:50 Build Finished (took 11s.704ms)
+02:23:21 Build Finished (took 4s.97ms)
 

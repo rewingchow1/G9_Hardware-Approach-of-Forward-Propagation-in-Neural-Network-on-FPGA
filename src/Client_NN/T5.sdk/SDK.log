@@ -129,3 +129,269 @@ con
 00:31:23 INFO  : Successfully done setting XSCT server connection channel  
 00:31:23 INFO  : Successfully done setting SDK workspace  
 00:31:23 INFO  : Processing command line option -hwspec C:/Client_NN/T5.sdk/design_1_wrapper.hdf.
+00:34:47 INFO  : Launching XSCT server: xsct.bat -interactive C:\Client_NN\T5.sdk\temp_xsdb_launch_script.tcl
+00:34:49 INFO  : XSCT server has started successfully.
+00:34:52 INFO  : Successfully done setting XSCT server connection channel  
+00:34:52 INFO  : Successfully done setting SDK workspace  
+00:34:53 INFO  : Registering command handlers for SDK TCF services
+00:34:54 INFO  : Processing command line option -hwspec C:/Client_NN/T5.sdk/design_1_wrapper.hdf.
+00:34:54 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+00:35:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+00:35:31 INFO  : 'fpga -state' command is executed.
+00:35:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:35:31 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+00:35:31 INFO  : 'jtag frequency' command is executed.
+00:35:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:35:32 INFO  : Context for processor 'microblaze_0' is selected.
+00:35:32 INFO  : System reset is completed.
+00:35:33 ERROR : 'after 3000' is cancelled.
+00:35:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+01:02:29 INFO  : Launching XSCT server: xsct.bat -interactive C:\Client_NN\T5.sdk\temp_xsdb_launch_script.tcl
+01:02:31 INFO  : XSCT server has started successfully.
+01:02:34 INFO  : Successfully done setting XSCT server connection channel  
+01:02:34 INFO  : Successfully done setting SDK workspace  
+01:02:35 INFO  : Registering command handlers for SDK TCF services
+01:02:36 INFO  : Processing command line option -hwspec C:/Client_NN/T5.sdk/design_1_wrapper.hdf.
+01:02:36 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+01:04:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:04:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+01:04:34 INFO  : FPGA configured successfully with bitstream "C:/Client_NN/T5.sdk/design_1_wrapper_hw_platform_0/download.bit"
+01:04:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+01:04:58 INFO  : 'fpga -state' command is executed.
+01:04:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:04:58 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+01:04:58 INFO  : 'jtag frequency' command is executed.
+01:04:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:04:58 INFO  : Context for processor 'microblaze_0' is selected.
+01:04:58 INFO  : System reset is completed.
+01:05:01 INFO  : 'after 3000' command is executed.
+01:05:01 INFO  : Context for processor 'microblaze_0' is selected.
+01:05:02 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+01:05:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+01:05:02 INFO  : Context for processor 'microblaze_0' is selected.
+01:05:02 INFO  : 'con' command is executed.
+01:05:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+01:05:02 INFO  : Disconnected from the channel tcfchan#1.
+02:49:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+02:49:15 INFO  : 'fpga -state' command is executed.
+02:49:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:49:15 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+02:49:15 INFO  : 'jtag frequency' command is executed.
+02:49:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:49:16 INFO  : Context for processor 'microblaze_0' is selected.
+02:49:16 INFO  : System reset is completed.
+02:49:19 INFO  : 'after 3000' command is executed.
+02:49:20 INFO  : Context for processor 'microblaze_0' is selected.
+02:49:21 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+02:49:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+02:49:22 INFO  : Context for processor 'microblaze_0' is selected.
+02:49:22 INFO  : 'con' command is executed.
+02:49:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+02:49:22 INFO  : Disconnected from the channel tcfchan#2.
+02:52:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+02:52:12 INFO  : 'fpga -state' command is executed.
+02:52:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:52:12 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+02:52:12 INFO  : 'jtag frequency' command is executed.
+02:52:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:52:13 INFO  : Context for processor 'microblaze_0' is selected.
+02:52:13 INFO  : System reset is completed.
+02:52:16 INFO  : 'after 3000' command is executed.
+02:52:17 INFO  : Context for processor 'microblaze_0' is selected.
+02:52:18 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+02:52:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+02:52:19 INFO  : Context for processor 'microblaze_0' is selected.
+02:52:19 INFO  : 'con' command is executed.
+02:52:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+02:52:19 INFO  : Disconnected from the channel tcfchan#3.
+02:53:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+02:53:26 INFO  : 'fpga -state' command is executed.
+02:53:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:53:26 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+02:53:26 INFO  : 'jtag frequency' command is executed.
+02:53:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:53:27 INFO  : Context for processor 'microblaze_0' is selected.
+02:53:27 INFO  : System reset is completed.
+02:53:30 INFO  : 'after 3000' command is executed.
+02:53:31 INFO  : Context for processor 'microblaze_0' is selected.
+02:53:32 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+02:53:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+02:53:33 INFO  : Context for processor 'microblaze_0' is selected.
+02:53:33 INFO  : 'con' command is executed.
+02:53:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+02:53:33 INFO  : Disconnected from the channel tcfchan#4.
+02:56:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+02:56:58 INFO  : 'fpga -state' command is executed.
+02:56:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:56:58 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+02:56:58 INFO  : 'jtag frequency' command is executed.
+02:56:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:56:59 INFO  : Context for processor 'microblaze_0' is selected.
+02:56:59 INFO  : System reset is completed.
+02:57:02 INFO  : 'after 3000' command is executed.
+02:57:04 INFO  : Context for processor 'microblaze_0' is selected.
+02:57:04 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+02:57:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+02:57:05 INFO  : Context for processor 'microblaze_0' is selected.
+02:57:05 INFO  : 'con' command is executed.
+02:57:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+02:57:05 INFO  : Disconnected from the channel tcfchan#5.
+03:00:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+03:00:55 INFO  : 'fpga -state' command is executed.
+03:00:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:00:55 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+03:00:55 INFO  : 'jtag frequency' command is executed.
+03:00:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+03:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+03:00:56 INFO  : System reset is completed.
+03:00:59 INFO  : 'after 3000' command is executed.
+03:01:00 INFO  : Context for processor 'microblaze_0' is selected.
+03:01:01 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+03:01:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+03:01:02 INFO  : Context for processor 'microblaze_0' is selected.
+03:01:02 INFO  : 'con' command is executed.
+03:01:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+03:01:02 INFO  : Disconnected from the channel tcfchan#6.
+03:04:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+03:04:58 INFO  : 'fpga -state' command is executed.
+03:04:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:04:59 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+03:04:59 INFO  : 'jtag frequency' command is executed.
+03:04:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+03:05:00 INFO  : Context for processor 'microblaze_0' is selected.
+03:05:00 INFO  : System reset is completed.
+03:05:03 INFO  : 'after 3000' command is executed.
+03:05:04 INFO  : Context for processor 'microblaze_0' is selected.
+03:05:05 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+03:05:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+03:05:06 INFO  : Context for processor 'microblaze_0' is selected.
+03:05:06 INFO  : 'con' command is executed.
+03:05:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+03:05:06 INFO  : Disconnected from the channel tcfchan#7.
+03:08:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys Video 210276690173B" && level==0} -index 0' command is executed.
+03:08:11 INFO  : 'fpga -state' command is executed.
+03:08:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:08:11 INFO  : Jtag cable 'Digilent Nexys Video 210276690173B' is selected.
+03:08:11 INFO  : 'jtag frequency' command is executed.
+03:08:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+03:08:13 INFO  : Context for processor 'microblaze_0' is selected.
+03:08:13 INFO  : System reset is completed.
+03:08:16 INFO  : 'after 3000' command is executed.
+03:08:17 INFO  : Context for processor 'microblaze_0' is selected.
+03:08:18 INFO  : The application 'C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf' is downloaded to processor 'microblaze_0'.
+03:08:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+dow C:/Client_NN/T5.sdk/NN_HW_Client/Debug/NN_HW_Client.elf
+----------------End of Script----------------
+
+03:08:19 INFO  : Context for processor 'microblaze_0' is selected.
+03:08:19 INFO  : 'con' command is executed.
+03:08:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys Video 210276690173B"} -index 0
+con
+----------------End of Script----------------
+
+03:08:19 INFO  : Disconnected from the channel tcfchan#8.

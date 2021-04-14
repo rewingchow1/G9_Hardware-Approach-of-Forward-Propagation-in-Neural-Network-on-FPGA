@@ -1,0 +1,34 @@
+03:08:01 **** Incremental Build of configuration Debug for project NN_Server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_Server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:274:28: warning: unused variable 'label_digit' [-Wunused-variable]
+  u8 correct, nn_out_digit, label_digit;
+                            ^~~~~~~~~~~
+../src/main.c:274:14: warning: unused variable 'nn_out_digit' [-Wunused-variable]
+  u8 correct, nn_out_digit, label_digit;
+              ^~~~~~~~~~~~
+../src/main.c:272:18: warning: unused variable 'tmp' [-Wunused-variable]
+  union ByteFixed tmp;
+                  ^~~
+../src/main.c:271:13: warning: unused variable 'j' [-Wunused-variable]
+  int i = 0, j = 0, test_label_cnt = 0, nn_output_cnt = 0;
+             ^
+'Finished building: ../src/main.c'
+' '
+'Building target: NN_Server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_Server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_Server.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: NN_Server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size NN_Server.elf  |tee "NN_Server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 136404	   1604	3960848	4098856	 3e8b28	NN_Server.elf
+'Finished building: NN_Server.elf.size'
+' '
+
+03:08:02 Build Finished (took 902ms)
+

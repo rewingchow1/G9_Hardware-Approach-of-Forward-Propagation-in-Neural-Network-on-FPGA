@@ -69,15 +69,15 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys_video:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir W:/ECE532/Server_NN/Server_NN/T5.cache/wt [current_project]
-  set_property parent.project_path W:/ECE532/Server_NN/Server_NN/T5.xpr [current_project]
-  set_property ip_output_repo W:/ECE532/Server_NN/Server_NN/T5.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Server_NN/T5.cache/wt [current_project]
+  set_property parent.project_path C:/Server_NN/T5.xpr [current_project]
+  set_property ip_output_repo C:/Server_NN/T5.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet W:/ECE532/Server_NN/Server_NN/T5.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Server_NN/T5.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files W:/ECE532/Server_NN/Server_NN/T5.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Server_NN/T5.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a200tsbg484-1
