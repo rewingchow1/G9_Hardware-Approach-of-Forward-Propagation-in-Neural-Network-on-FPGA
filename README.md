@@ -3,6 +3,9 @@
 ## Description:
 Implemented a 2-layer (784-16-10) neural network built on hardware that is able to recognize handwritten digits from the MNIST dataset. Performance and accuracy of the neural netowrk will be sent from one FPGA (Client) with the nerual network IP core to another FPGA (Server) through LWIP TCP ethernet communication. This data is visualized on a PC which is connected by UART to the second FPGA.
 
+![unnamed](https://user-images.githubusercontent.com/71918289/114693748-e9dec000-9ce7-11eb-8b89-381dd94d94c1.png)
+
+
 ## How to Use:
 ### Client with Neural Network:
 1.
