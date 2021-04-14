@@ -21,7 +21,7 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 
 ### Server & Python Visualization:
 #### To Run Out of the Box:
-1. open Vivado 2018.3, click open project, search for the T5.xpr, then open it
+1. Open Vivado 2018.3, click open project, search for the T5.xpr, then open it
 2. Click file, then click Launch SDK
 3. Once SDK is open, open main.c, change ADDR to the IP address of your FPGA. Ex, if your IP address is 1.1.22.2, then set ADDR to 22. If your IP address is not in the format of 1.1.ADDR.2, then go to line 196 and line 251, change to your IP address.
 4. Change MAC_ADDR to the coressponding MAC address of your FPGA. 
@@ -31,10 +31,14 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 8. Once data is received from the client, a plot with 10 subplots should show up.
 
 #### To Configure Server System:
-1.df
-2.fd
-3.dffv
-4.sdf
+1. Open Vivado 2018.3, click open project, search for the T5.xpr, then open it
+2. Open block diagram, and make necessary changes
+3. Synthesize, Implement and Genearte Bitstream for new design
+4. Once bitstream has been generated, click file and export hardware including bitstream
+5. Click file, then click Launch SDK
+6. Make any MicroBlaze software changes
+7. Program FPGA with new bitstream
+8. Run application confgiuration
 
 ## Repository Structure:
 ### src
@@ -43,9 +47,9 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 - **Server_NN**: Included system design for server FPGA along with corresponding Vivado 2018.3 project and Vivado SDK application to run server software on MicroBlaze. Also includes a pyserial.py Python3 file which is used to visualize neural network performance.
 
 ### docs
-- **presentations**: Proposal, mid-project and final presenation of the project
-- **reports**: Proposal and final report of the project
-- **video**: A 2-minute video highlighting the project and how the full system works together
+- **presentations**: Proposal, mid-project and final presenation for the project.
+- **reports**: Proposal and final report for the project.
+- **video**: A 2-minute video highlighting the project and how the full system works together.
 
 ## Authours:
 - Yu Gao
