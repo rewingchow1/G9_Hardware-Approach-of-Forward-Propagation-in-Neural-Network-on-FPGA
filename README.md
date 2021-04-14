@@ -15,7 +15,7 @@ Implemented a neural network built on hardware able to recognize handwritten dig
 - **Server_NN**: 
 
 ### docs
-- **presentations**: Proposal, mid-progress and final presenation of the project
+- **presentations**: Proposal, mid-project and final presenation of the project
 - **reports**: Proposal and final report of the project
 - **video**: A 2-minute video highlighting the project and how the full system works together
 
