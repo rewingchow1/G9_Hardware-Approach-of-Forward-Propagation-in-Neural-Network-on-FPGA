@@ -10,14 +10,14 @@ Implemented a neural network built on hardware able to recognize handwritten dig
 
 ## Repository Structure:
 ### src
-- AXISHandWritten_16: 
-- Client_NN: 
-- Server_NN: 
+- **AXISHandWritten_16**: 
+- **Client_NN**: 
+- **Server_NN**: 
 
 ### docs
-- presentations: Proposal, mid-progress and final presenation of the project
-- reports: Proposal and final report of the project
-- video: A 2-minute video highlighting the project and how the full system works together
+- **presentations**: Proposal, mid-progress and final presenation of the project
+- **reports**: Proposal and final report of the project
+- **video**: A 2-minute video highlighting the project and how the full system works together
 
 ## Authours:
 - Yu Gao
