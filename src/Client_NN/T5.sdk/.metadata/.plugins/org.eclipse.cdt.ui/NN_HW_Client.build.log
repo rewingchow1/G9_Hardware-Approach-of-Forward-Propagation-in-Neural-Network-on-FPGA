@@ -1,21 +1,6 @@
-02:22:32 **** Auto Build of configuration Debug for project NN_HW_Client ****
+00:28:33 **** Incremental Build of configuration Debug for project NN_HW_Client ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../NN_HW_Client_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: NN_HW_Client.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../NN_HW_Client_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "NN_HW_Client.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/neuralnet.o ./src/platform.o ./src/platform_mb.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_client.o ./src/tcp_perf_server.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: NN_HW_Client.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size NN_HW_Client.elf  |tee "NN_HW_Client.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 156980	   1668	203919912	204078560	c29fde0	NN_HW_Client.elf
-'Finished building: NN_HW_Client.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-02:22:33 Build Finished (took 948ms)
+00:28:33 Build Finished (took 204ms)
 

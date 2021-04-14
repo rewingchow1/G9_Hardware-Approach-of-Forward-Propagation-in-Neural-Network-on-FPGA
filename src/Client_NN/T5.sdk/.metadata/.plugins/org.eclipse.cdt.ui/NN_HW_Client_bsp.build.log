@@ -1,4 +1,4 @@
-21:23:49 **** Build of project NN_HW_Client_bsp ****
+00:27:20 **** Build of project NN_HW_Client_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
 make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -50,5 +50,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-21:24:07 Build Finished (took 18s.275ms)
+00:27:37 Build Finished (took 16s.812ms)
 

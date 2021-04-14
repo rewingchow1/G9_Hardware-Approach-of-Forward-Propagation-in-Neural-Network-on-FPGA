@@ -16,9 +16,7 @@ C_SRCS += \
 ../src/platform_zynq.c \
 ../src/platform_zynqmp.c \
 ../src/sfp.c \
-../src/si5324.c \
-../src/tcp_client.c \
-../src/tcp_perf_server.c 
+../src/si5324.c 
 
 OBJS += \
 ./src/i2c_access.o \
@@ -30,9 +28,7 @@ OBJS += \
 ./src/platform_zynq.o \
 ./src/platform_zynqmp.o \
 ./src/sfp.o \
-./src/si5324.o \
-./src/tcp_client.o \
-./src/tcp_perf_server.o 
+./src/si5324.o 
 
 C_DEPS += \
 ./src/i2c_access.d \
@@ -44,9 +40,7 @@ C_DEPS += \
 ./src/platform_zynq.d \
 ./src/platform_zynqmp.d \
 ./src/sfp.d \
-./src/si5324.d \
-./src/tcp_client.d \
-./src/tcp_perf_server.d 
+./src/si5324.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
