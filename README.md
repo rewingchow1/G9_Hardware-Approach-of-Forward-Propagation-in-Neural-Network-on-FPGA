@@ -72,7 +72,7 @@ NOTE: Setup server before setting up the client.
 ### docs
 - **presentations**: Proposal, mid-project and final presentation for the project.
 - **reports**: Proposal and final report for the project.
-- **video**: A 2-minute video highlighting the project and how the full system works together.
+- **video**: A 5-minute video highlighting the project and how the full system works together.
 
 ## Authors:
 - Yu Gao
