@@ -4,6 +4,12 @@
 Implemented a neural network built on hardware able to recognize handwritten digits from the MNIST dataset. Performance and accuracy of the neural netowrk will be sent from one FPGA with the nerual network IP core to another FPGA through LWIP TCP ethernet communication. This data is visualized on a PC which is connected by UART to the second FPGA.
 
 ## How to Use:
+### Client with Neural Network:
+1.
+2.
+3.
+
+### Server & Python Visualization:
 1.
 2.
 3.
