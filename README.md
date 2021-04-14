@@ -18,6 +18,7 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 7. Program the FPGA, then run with GDB configuration
 8. When prompted in TeraTerm terminal to send labels, click "File" then "Send file..." and locate the labels file ("test_labels_10k") and send it as a binary
 9. When prompted in TeraTerm terminal to send images, click "File" then "Send file..." and locate the images file ("test_images_10k") and send it as a binary
+
 NOTE: Setup server before setting up client.
 
 #### To Configure Neural Network or Client System:
