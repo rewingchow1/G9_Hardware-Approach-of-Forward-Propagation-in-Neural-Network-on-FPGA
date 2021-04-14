@@ -16,8 +16,8 @@ Implemented a neural network built on hardware able to recognize handwritten dig
 
 ## Repository Structure:
 ### src
-- **AXISHandWritten_16**: 
-- **Client_NN**: 
+- **AXISHandWritten_16**: Includes source code for pre-trained MNIST 784-16-10 Neural Network and Vivado 2018.3 project
+- **Client_NN**: Includes system design for client FPGA along with Vivado 2018.3 project 
 - **Server_NN**: 
 
 ### docs
