@@ -14,31 +14,39 @@ Implemented a 2-layer (784-16-10) neural network built on hardware that is able 
 3.
 
 #### To Configure Neural Network or Client System:
-1.sdfs
-2.sdfsd
-3.sdfsd
-4.sdf
+##### Neural Network:
 
-### Server & Python Visualization:
-#### To Run Out of the Box:
-1. Open Vivado 2018.3, click open project, search for the T5.xpr, then open it
-2. Click file, then click Launch SDK
-3. Once SDK is open, open main.c, change ADDR to the IP address of your FPGA. Ex, if your IP address is 1.1.22.2, then set ADDR to 22. If your IP address is not in the format of 1.1.ADDR.2, then go to line 196 and line 251, change to your IP address.
-4. Change MAC_ADDR to the coressponding MAC address of your FPGA. 
-5. Connect the terminal COM 5, with a serial speed of 9600.
-6. Rebuild the porject, program the FPGA, then run with GDB. On the termial you should see information that states the server is ready to receive data.
-7. Once server is ready, disconnect the terminal. Open the pyserial.py file with IDLE (or other editors), and run it, you should see on the termial it prints out listening at COM5.
-8. Once data is received from the client, a plot with 10 subplots should show up.
-
-#### To Configure Server System:
-1. Open Vivado 2018.3, click open project, search for the T5.xpr, then open it
+##### Client System:
+1. Open Vivado 2018.3, click open project, search for the T5.xpr in Client_NN, then open it
 2. Open block diagram, and make necessary changes
 3. Synthesize, Implement and Genearte Bitstream for new design
 4. Once bitstream has been generated, click file and export hardware including bitstream
 5. Click file, then click Launch SDK
-6. Make any MicroBlaze software changes
+6. Make any MicroBlaze software changes to client code
 7. Program FPGA with new bitstream
-8. Run application confgiuration
+8. Run application confgiuration on Client FPGA
+
+### Server & Python Visualization:
+#### To Run Out of the Box:
+1. Open Vivado 2018.3, click open project, search for the T5.xpr in Server_NN, then open it
+2. Click file, then click Launch SDK
+3. Once SDK is open, open main.c, change ADDR to the IP address of your FPGA. Ex, if your IP address is 1.1.22.2, then set ADDR to 22. If your IP address is not in the format of 1.1.ADDR.2, then go to line 196 and line 251, change to your IP address
+4. Change MAC_ADDR to the coressponding MAC address of your FPGA
+5. Connect the terminal COM5, with a serial speed of 9600
+6. Rebuild the project, program the FPGA, then run with GDB
+7. On the termial you should see information that states the server is ready to receive data
+8. Once server is ready, disconnect the terminal, open the pyserial.py file with IDLE (or other editors), and run it, you should see on the termial it prints out listening at COM5
+9. Once data is received from the client, a plot with 10 subplots should show up
+
+#### To Configure Server System:
+1. Open Vivado 2018.3, click open project, search for the T5.xpr in Server_NN, then open it
+2. Open block diagram, and make necessary changes
+3. Synthesize, Implement and Genearte Bitstream for new design
+4. Once bitstream has been generated, click file and export hardware including bitstream
+5. Click file, then click Launch SDK
+6. Make any MicroBlaze software changes to server code
+7. Program FPGA with new bitstream
+8. Run application confgiuration on Server FPGA
 
 ## Repository Structure:
 ### src
