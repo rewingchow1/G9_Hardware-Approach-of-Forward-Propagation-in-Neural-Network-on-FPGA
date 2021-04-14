@@ -1,7 +1,7 @@
 # Hardware Approach of Forward Propagation in Neural Network on FPGA
 
 ## Description:
-Implemented a neural network built on hardware able to recognize handwritten digits from the MNIST dataset. Performance and accuracy of the neural netowrk will be sent from one FPGA with the nerual network IP core to another FPGA through LWIP TCP ethernet communication. This data is visualized on a PC which is connected by UART to the second FPGA.
+Implemented a 2-layer (784-16-10) neural network built on hardware that is able to recognize handwritten digits from the MNIST dataset. Performance and accuracy of the neural netowrk will be sent from one FPGA (Client) with the nerual network IP core to another FPGA (Server) through LWIP TCP ethernet communication. This data is visualized on a PC which is connected by UART to the second FPGA.
 
 ## How to Use:
 ### Client with Neural Network:
@@ -16,9 +16,9 @@ Implemented a neural network built on hardware able to recognize handwritten dig
 
 ## Repository Structure:
 ### src
-- **AXISHandWritten_16**: Includes source code for pre-trained MNIST 784-16-10 Neural Network and Vivado 2018.3 project
-- **Client_NN**: Includes system design for client FPGA along with Vivado 2018.3 project 
-- **Server_NN**: 
+- **AXISHandWritten_16**: Includes source code for pre-trained MNIST 784-16-10 Neural Network with corresponding Vivado 2018.3 project.
+- **Client_NN**: Includes system design for client FPGA along with corresponding Vivado 2018.3 project and Vivado SDK application to run client software on MicroBlaze.
+- **Server_NN**: Included system design for server FPGA along with corresponding Vivado 2018.3 project and Vivado SDK application to run server software on MicroBlaze. Also includes a pyserial.py Python3 file which is used to visualize neural network performance.
 
 ### docs
 - **presentations**: Proposal, mid-project and final presenation of the project
