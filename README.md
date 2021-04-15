@@ -3,7 +3,7 @@
 ## Description:
 Implemented a 2-layer (784-16-10) neural network built on hardware that can recognize handwritten digits from the MNIST dataset. Performance and accuracy of the neural network will be sent from one FPGA (Client) with the neural network IP core to another FPGA (Server) through LWIP TCP Ethernet communication. This data is visualized on a PC that is connected by UART to the second FPGA.
 
-https://www.youtube.com/watch?v=85MMx2kJ0M8
+Link to Intro & Demo Video: https://www.youtube.com/watch?v=85MMx2kJ0M8
 
 ![unnamed](https://user-images.githubusercontent.com/71918289/114693748-e9dec000-9ce7-11eb-8b89-381dd94d94c1.png)
 
@@ -74,7 +74,6 @@ NOTE: Setup server before setting up the client.
 ### docs
 - **presentations**: Proposal, mid-project and final presentation for the project.
 - **reports**: Proposal and final report for the project.
-- **video**: A 5-minute video highlighting the project and how the full system works together.
 
 ## Authors:
 - Yu Gao
